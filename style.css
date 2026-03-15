@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background: #ffff;
+  color: #111;
+}
+
+.topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  background: transparent;
+  z-index: 10;
+}
+
+.topbar__link {
+  text-decoration: none;
+  color: #FF0004;
+  font-family: 'Montserrat';
+  font-size: 14px;
+}
+
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display:block;
+}
+
+.hero__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FF0004;
+  font-family: 'Montserrat';
+  font-size: 1vw;
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  z-index: 10;
+}
+
+#mainVideo {
+  position:absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.page {
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.collage {
+  position: relative;
+  width: 100%;
+  min-height: 530vw;
+}
+
+.tile {
+  position: absolute;
+  border: none;
+  padding: 0;
+  background: none;
+}
+
+.tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#t1 { 
+  width: 29.375vw;
+  aspect-ratio: 4 / 5;
+  top: 77.1vw;
+  left: 1.5625vw;
+}
+
+#t2 { 
+  width: 20vw;
+  aspect-ratio: 4 / 5;
+  top: 88.8vw;
+  left: 32.7vw;
+}
+
+#t3 { 
+  width: 35.6vw;
+  aspect-ratio: 4 / 5;
+  top: 69.3vw;
+  left: 63.4vw;
+}
+
+#t4 {
+  width: 59.0625vw;
+  aspect-ratio: 3 / 2;
+  top: 130.15vw;
+  left: 6.17vw;
+}
+
+#t5 {
+  width: 23.4375vw;
+  aspect-ratio: 4 / 5;
+  top: 130.15vw;
+  left: 66.40vw;
+}
+
+#t6 {
+  width: 53.125vw;
+  aspect-ratio: 4 / 5;
+  left: 2.578vw;
+  top: 192.34vw;
+}
+
+#t7 {
+  width: 32.89vw;
+  aspect-ratio: 4 / 5;
+  left: 60.46vw;
+  top: 192.34vw;
+}
+
+#t8 {
+  width: 35.3125vw;
+  aspect-ratio: 4 / 5;
+  left: 2.578vw;
+  top: 297.65vw;
+}
+
+#t9 {
+  width: 59.21vw;
+  aspect-ratio: 4 / 5;
+  top: 267.89vw;
+  left: 39.84vw;
+}
+
+#t10 {
+  width: 65.85vw;
+  aspect-ratio: 4 / 5;
+  top: 363.2vw;
+  left: 8.28vw;
+}
+
+#t11 {
+  width: 92.89vw;
+  aspect-ratio: 3 / 2;
+  top: 456.09vw;
+  left: 3.59vw;
+}
+
+#t12 {
+  width: 45.46vw;
+  aspect-ratio: 4 / 5;
+  top: 563.98vw;
+  left: 1.01vw;
+}
+
+#t13 {
+  width: 49.6vw;
+  aspect-ratio: 4 / 5;
+  top: 521.95vw;
+  left: 48.43vw;
+}
+
+
+#t14,
+#t15,
+#t16 {
+  display: none;
+}
