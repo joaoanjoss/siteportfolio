@@ -106,7 +106,7 @@
       <img class="lightbox__img" id="lightboxImg" src="" alt="" />
     </div>
   </div>
- 
+
   <script src="script.js"></script>
   <script>
     (function () {
@@ -115,7 +115,7 @@
       const lightboxClose = document.getElementById('lightboxClose');
       const lightboxBackdrop = document.getElementById('lightboxBackdrop');
       const tiles = document.querySelectorAll('.tile');
- 
+
       function openLightbox(src, alt) {
         lightboxImg.src = src;
         lightboxImg.alt = alt || '';
@@ -123,22 +123,22 @@
         document.body.classList.add('lightbox-active');
         lightboxClose.focus();
       }
- 
+
       function closeLightbox() {
         lightbox.classList.remove('lightbox--open');
         document.body.classList.remove('lightbox-active');
       }
- 
+
       tiles.forEach(function (tile) {
         tile.addEventListener('click', function () {
           const img = tile.querySelector('img');
           if (img) openLightbox(img.src, img.alt);
         });
       });
- 
+
       lightboxClose.addEventListener('click', closeLightbox);
       lightboxBackdrop.addEventListener('click', closeLightbox);
- 
+
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') closeLightbox();
       });
@@ -146,4 +146,3 @@
   </script>
 </body>
 </html>
- 
