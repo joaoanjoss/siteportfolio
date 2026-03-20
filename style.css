@@ -1,24 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
- 
+
 * {
   box-sizing: border-box;
 }
- 
+
 html,
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
- 
+
 body {
   font-family: Helvetica, Arial, sans-serif;
   background: #fff;
   color: #111;
 }
- 
+
 /* HEADER */
- 
+
 .topbar {
   position: absolute;
   top: 0;
@@ -32,15 +32,15 @@ body {
   background: transparent;
   z-index: 20;
 }
- 
+
 .topbar__link {
   text-decoration: none;
   color: #FF0004;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
 }
- 
- 
+
+
 .hero {
   position: relative;
   width: 100%;
@@ -51,7 +51,7 @@ body {
   z-index: 1;
   will-change: transform;
 }
- 
+
 #mainVideo {
   position: absolute;
   inset: 0;
@@ -63,7 +63,7 @@ body {
   z-index: 0;
   transform: translateZ(0);
 }
- 
+
 .hero__title {
   position: absolute;
   top: 50%;
@@ -76,8 +76,18 @@ body {
   letter-spacing: 0.3em;
   text-transform: uppercase;
   z-index: 2;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #FF0004;
+  border-radius: 4px;
+  padding: 0.8em 1.6em;
+  transition: opacity 0.2s;
 }
- 
+
+.hero__title:hover {
+  opacity: 0.7;
+}
+
 .page {
   position: relative;
   width: 100%;
@@ -87,15 +97,15 @@ body {
   background: #fff;
   z-index: 5;
 }
- 
- 
+
+
 .collage {
   position: relative;
   width: 100%;
-  min-height: 530vw;
+  min-height: 480vw;
   background: #fff;
 }
- 
+
 .tile {
   position: absolute;
   border: none;
@@ -103,134 +113,133 @@ body {
   background: none;
   cursor: pointer;
 }
- 
+
 .tile img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
- 
+
 #t1 { 
   width: 29.375vw;
   aspect-ratio: 4 / 5;
-  top: calc(77.1vw - var(--vh, 100vh));
+  top: 27.1vw;
   left: 1.5625vw;
 }
- 
+
 #t2 { 
   width: 20vw;
   aspect-ratio: 4 / 5;
-  top: calc(88.8vw - var(--vh, 100vh));
+  top: 38.8vw;
   left: 32.7vw;
 }
- 
+
 #t3 { 
   width: 35.6vw;
   aspect-ratio: 4 / 5;
-  top: calc(69.3vw - var(--vh, 100vh));
+  top: 19.3vw;
   left: 63.4vw;
 }
- 
+
 #t4 {
   width: 50.53vw;
   aspect-ratio: 4 / 5;
-  top: calc(124.37vw - var(--vh, 100vh));
+  top: 74.37vw;
   left: 0vw;
 }
- 
+
 #t5 {
   width: 41.71vw;
   aspect-ratio: 4 / 5;
-  top: calc(120.07vw - var(--vh, 100vh));
+  top: 70.07vw;
   left: 58.04vw;
 }
- 
- 
+
 #t6 {
   width: 59.0625vw;
   aspect-ratio: 3 / 2;
-  top: calc(190.38vw - var(--vh, 100vh));
+  top: 140.38vw;
   left: 6.17vw;
 }
- 
+
 #t7 {
   width: 23.4375vw;
   aspect-ratio: 4 / 5;
-  top: calc(190.38vw - var(--vh, 100vh));
+  top: 140.38vw;
   left: 66.40vw;
 }
- 
+
 #t8 {
   width: 53.125vw;
   aspect-ratio: 4 / 5;
   left: 2.578vw;
-  top: calc(252.57vw - var(--vh, 100vh));
+  top: 202.57vw;
 }
- 
+
 #t9 {
   width: 32.89vw;
   aspect-ratio: 4 / 5;
   left: 60.46vw;
-  top: calc(252.57vw - var(--vh, 100vh));
+  top: 202.57vw;
 }
- 
+
 #t10 {
   width: 35.3125vw;
   aspect-ratio: 4 / 5;
   left: 2.578vw;
-  top: calc(357.88vw - var(--vh, 100vh));
+  top: 307.88vw;
 }
- 
+
 #t11 {
   width: 59.21vw;
   aspect-ratio: 4 / 5;
-  top: calc(328.12vw - var(--vh, 100vh));
+  top: 278.12vw;
   left: 39.84vw;
 }
- 
+
 #t12 {
   width: 65.85vw;
   aspect-ratio: 4 / 5;
-  top: calc(423.43vw - var(--vh, 100vh));
+  top: 373.43vw;
   left: 8.28vw;
 }
- 
+
 #t13 {
   width: 92.89vw;
   aspect-ratio: 3 / 2;
-  top: calc(516.32vw - var(--vh, 100vh));
+  top: 466.32vw;
   left: 3.59vw;
 }
- 
+
 #t14 {
   width: 45.46vw;
   aspect-ratio: 4 / 5;
-  top: calc(624.21vw - var(--vh, 100vh));
+  top: 574.21vw;
   left: 1.01vw;
 }
- 
+
 #t15 {
   width: 49.6vw;
   aspect-ratio: 4 / 5;
-  top: calc(582.18vw - var(--vh, 100vh));
+  top: 532.18vw;
   left: 48.43vw;
 }
- 
- 
+
+
 #t16,
 #t17,
 #t18 {
   display: none;
 }
- 
+
 .reachus {
   position: relative;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
- 
+
 .reachus__photo {
   width: 100%;
   height: 100%;
@@ -238,7 +247,7 @@ body {
   display: block;
   filter: brightness(0.5);
 }
- 
+
 .reachus__text {
   position: absolute;
   top: 50%;
@@ -252,9 +261,9 @@ body {
   text-transform: lowercase;
   margin: 0;
 }
- 
+
 /* ── LIGHTBOX ── */
- 
+
 .lightbox {
   position: fixed;
   inset: 0;
@@ -268,18 +277,18 @@ body {
   opacity: 0;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
- 
+
 .lightbox--open {
   pointer-events: all;
   visibility: visible;
   opacity: 1;
 }
- 
+
 /* backdrop not needed anymore — full white screen */
 .lightbox__backdrop {
   display: none;
 }
- 
+
 /* panel is the full screen, image aligned left with padding */
 .lightbox__panel {
   position: relative;
@@ -293,11 +302,11 @@ body {
   transform: translateY(12px);
   transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
- 
+
 .lightbox--open .lightbox__panel {
   transform: translateY(0);
 }
- 
+
 .lightbox__img {
   max-width: 70vw;
   max-height: 85vh;
@@ -306,7 +315,7 @@ body {
   object-fit: contain;
   display: block;
 }
- 
+
 /* close button */
 .lightbox__close {
   position: absolute;
@@ -327,11 +336,11 @@ body {
   transition: opacity 0.2s;
   font-family: 'Montserrat', sans-serif;
 }
- 
+
 .lightbox__close:hover {
   opacity: 1;
 }
- 
+
 /* prevent page scroll when lightbox is open */
 body.lightbox-active {
   overflow: hidden;

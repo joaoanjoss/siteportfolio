@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio – João e Manuel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+ 
+<body>
+ 
+  <header class="topbar">
+    <a class="topbar__link" href="index.html">Home</a>
+    <a class="topbar__link" href="reachus.html">Reach Us</a>
+  </header>
+ 
+  <main class="page">
+    <section class="collage" aria-label="Photo collage">
+      <button class="tile" id="t1" aria-label="Open image 1">
+        <img src="assets/photos/IMG_6933.webp" alt="" loading="lazy" />
+      </button>
+      <button class="tile" id="t2" type="button" aria-label="Open image 2">
+        <img src="assets/photos/IMG_7257.webp" alt="" loading="lazy" />
+      </button>
+      <button class="tile" id="t3" type="button" aria-label="Open image 3">
+        <img src="assets/photos/IMG_9918.webp" alt="" loading="lazy" />
+      </button>
+      <button class="tile" id="t4" type="button" aria-label="Open image 4">
+        <img src="assets/photos/IMG_9109.webp" alt="" loading="lazy" />
+      </button>
+      <button class="tile" id="t5" type="button" aria-label="Open image 5">
+        <img src="assets/photos/IMG_9328.webp" alt="" loading="lazy" />
+      </button>
+      <button class="tile" id="t6" type="button" aria-label="Open image 6">
+        <img src="assets/photos/IMG_7805.webp" alt="" loading="lazy" />
+      </button>
+      <button class="tile" id="t7" type="button" aria-label="Open image 7">
+        <img src="assets/photos/IMG_6924.webp" alt="" loading="lazy" />
+      </button>
+      <button class="tile" id="t8" type="button" aria-label="Open image 8">
+        <img src="assets/photos/IMG_9087.webp" alt="" loading="lazy" />
+      </button>
+      <button class="tile" id="t9" type="button" aria-label="Open image 9">
+        <img src="assets/photos/IMG_7758.webp" alt="" loading="lazy" />
+      </button>
+      <button class="tile" id="t10" type="button" aria-label="Open image 10">
+        <img src="assets/photos/IMG_6946.webp" alt="" loading="lazy" />
+      </button>
+      <button class="tile" id="t11" type="button" aria-label="Open image 11">
+        <img src="assets/photos/IMG_8386.webp" alt="" loading="lazy" />
+      </button>
+      <button class="tile" id="t12" type="button" aria-label="Open image 12">
+        <img src="assets/photos/IMG_6911.webp" alt="" loading="lazy" />
+      </button>
+      <button class="tile" id="t13" type="button" aria-label="Open image 13">
+        <img src="assets/photos/IMG_9117.webp" alt="" loading="lazy" />
+      </button>
+      <button class="tile" id="t14" type="button" aria-label="Open image 14">
+        <img src="assets/photos/IMG_6461.webp" alt="" loading="lazy" />
+      </button>
+      <button class="tile" id="t15" type="button" aria-label="Open image 15">
+        <img src="assets/photos/IMG_9874.webp" alt="" loading="lazy" />
+      </button>
+    </section>
+  </main>
+ 
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <div class="lightbox__backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox__panel">
+      <button class="lightbox__close" id="lightboxClose" aria-label="Fechar">&#x2715;</button>
+      <img class="lightbox__img" id="lightboxImg" src="" alt="" />
+    </div>
+  </div>
+ 
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const lightboxClose = document.getElementById('lightboxClose');
+      const lightboxBackdrop = document.getElementById('lightboxBackdrop');
+      const tiles = document.querySelectorAll('.tile');
+ 
+      function openLightbox(src, alt) {
+        lightboxImg.src = src;
+        lightboxImg.alt = alt || '';
+        lightbox.classList.add('lightbox--open');
+        document.body.classList.add('lightbox-active');
+        lightboxClose.focus();
+      }
+ 
+      function closeLightbox() {
+        lightbox.classList.remove('lightbox--open');
+        document.body.classList.remove('lightbox-active');
+      }
+ 
+      tiles.forEach(function (tile) {
+        tile.addEventListener('click', function () {
+          const img = tile.querySelector('img');
+          if (img) openLightbox(img.src, img.alt);
+        });
+      });
+ 
+      lightboxClose.addEventListener('click', closeLightbox);
+      lightboxBackdrop.addEventListener('click', closeLightbox);
+ 
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeLightbox();
+      });
+    })();
+  </script>
+</body>
+</html>
