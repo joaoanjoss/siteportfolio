@@ -108,6 +108,19 @@
   </div>
  
   <script src="script.js"></script>
+
+  <script>
+    // Fix mobile viewport height (bars in Safari/Chrome shift 100vh)
+    (function () {
+      function setVh() {
+        document.documentElement.style.setProperty('--vh', window.innerHeight + 'px');
+      }
+      setVh();
+      window.addEventListener('resize', setVh);
+    })();
+  </script>
+
+  
   <script>
     (function () {
       const lightbox = document.getElementById('lightbox');
